@@ -15,6 +15,7 @@
 		D074A2DF2459F96B00425223 /* XTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2DE2459F96B00425223 /* XTeamTests.swift */; };
 		D074A31E245A1EA800425223 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A31D245A1EA800425223 /* TileViewController.swift */; };
 		D074A323245A20D800425223 /* IdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A322245A20D800425223 /* IdentifiableView.swift */; };
+		D093D628245A3DBB00C2FDAC /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093D627245A3DBB00C2FDAC /* ResumeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D074A2E02459F96B00425223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D074A31D245A1EA800425223 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		D074A322245A20D800425223 /* IdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableView.swift; sourceTree = "<group>"; };
+		D093D627245A3DBB00C2FDAC /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				D074A2C72459F96900425223 /* AppDelegate.swift */,
 				D074A31F245A20A300425223 /* Controllers */,
 				D074A320245A20B000425223 /* Views */,
+				D093D626245A3DA100C2FDAC /* Model */,
 				D074A2D02459F96B00425223 /* Assets.xcassets */,
 				D074A321245A20C400425223 /* Extensions */,
 				D074A2D22459F96B00425223 /* LaunchScreen.storyboard */,
@@ -106,7 +109,6 @@
 			children = (
 				D074A2CB2459F96900425223 /* MainViewController.swift */,
 				D074A31D245A1EA800425223 /* TileViewController.swift */,
-				D0102F7B245A2C8900B9D202 /* TileViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 		D074A320245A20B000425223 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D0102F7B245A2C8900B9D202 /* TileViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +127,14 @@
 				D074A322245A20D800425223 /* IdentifiableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D093D626245A3DA100C2FDAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D093D627245A3DBB00C2FDAC /* ResumeItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D093D628245A3DBB00C2FDAC /* ResumeItem.swift in Sources */,
 				D074A31E245A1EA800425223 /* TileViewController.swift in Sources */,
 				D074A323245A20D800425223 /* IdentifiableView.swift in Sources */,
 				D074A2CC2459F96900425223 /* MainViewController.swift in Sources */,

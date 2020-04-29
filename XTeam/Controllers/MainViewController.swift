@@ -18,14 +18,16 @@ final class MainViewController: UIViewController {
     
     let redVC = UIViewController()
     let blueVC = UIViewController()
-    var resumePages: [UIViewController] = []
     var currentIndex = 0
+    var resumePages: [UIViewController] = []
+    var resumeItems: [ResumeItem]  = [ResumeItem(title: "Foxtail Games", detail: "Founder, CEO", imageName: "FoxtailBrick", longDescription: "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, many of which shipped to the App Store. We gained a few thousand downloads, and won a number of entrepreneur pitch competitions.", galleryImageNames: []),
+    ResumeItem(title: "Bloveit", detail: "Lead Developer", imageName: "FoxtailBrick", longDescription: "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, many of which shipped to the App Store. We gained a few thousand downloads, and won a number of entrepreneur pitch competitions.", galleryImageNames: [])]
     
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
 
-        self.resumePages = [TileViewController(tileDelegate: self), TileViewController(tileDelegate: self)]
+        self.resumePages = [TileViewController(tileDelegate: self, resumeItem: self.resumeItems[0], index: 0), TileViewController(tileDelegate: self, resumeItem: self.resumeItems[1], index: 1)]
         self.setGradient()
         self.setLabels()
         self.setPageController()
@@ -153,7 +155,7 @@ extension MainViewController: UIPageViewControllerDataSource {
 }
 
 extension MainViewController: TileSelectorDelegate {
-    func tileSelected() {
+    func tileSelected(forItem resumeItem: ResumeItem) {
         self.navigationController?.present(UIViewController(), animated: true)
     }
 }

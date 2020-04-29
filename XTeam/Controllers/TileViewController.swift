@@ -15,11 +15,16 @@ class TileViewController: UIViewController, IdentifiableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    
+    var resumeItem: ResumeItem?
+    var index: Int?
     weak var tileDelegate: TileSelectorDelegate?
     
-    init(tileDelegate: TileSelectorDelegate) {
-        super.init(nibName: "TileViewController", bundle: nil)
+    init(tileDelegate: TileSelectorDelegate, resumeItem: ResumeItem, index: Int) {
+        self.resumeItem = resumeItem
         self.tileDelegate = tileDelegate
+        self.index = index
+        super.init(nibName: "TileViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -29,14 +34,26 @@ class TileViewController: UIViewController, IdentifiableView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.containerView.layer.cornerRadius = 25.0
+        guard let resumeItem = self.resumeItem, let index = self.index else {
+            assertionFailure("Loaded a resume tile without any resume data.")
+            return
+        }
+        self.titleLabel.text = resumeItem.title
+        self.detailLabel.text = resumeItem.detail
+        self.numberLabel.text = String(index + 1)
+        self.imageView.image = UIImage(named: resumeItem.imageName)
     }
     
     @IBAction func learnMoreButtonPressed(_ sender: Any) {
-        self.tileDelegate?.tileSelected()
+        guard let resumeItem = self.resumeItem else {
+            assertionFailure("We selected a resume tile for which there was no associated resume item.")
+            return
+        }
+        self.tileDelegate?.tileSelected(forItem: resumeItem)
     }
     
 }
 
 protocol TileSelectorDelegate: class {
-    func tileSelected()
+    func tileSelected(forItem resumeItem: ResumeItem)
 }
