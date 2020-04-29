@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0102F7C245A2C8900B9D202 /* Hello.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0102F7B245A2C8900B9D202 /* Hello.xib */; };
 		D074A2C82459F96900425223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2C72459F96900425223 /* AppDelegate.swift */; };
 		D074A2CC2459F96900425223 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2CB2459F96900425223 /* MainViewController.swift */; };
 		D074A2D12459F96B00425223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D074A2D02459F96B00425223 /* Assets.xcassets */; };
 		D074A2D42459F96B00425223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D074A2D22459F96B00425223 /* LaunchScreen.storyboard */; };
 		D074A2DF2459F96B00425223 /* XTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2DE2459F96B00425223 /* XTeamTests.swift */; };
 		D074A2EA2459FEC500425223 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2E92459FEC500425223 /* TileView.swift */; };
-		D074A2EC2459FECF00425223 /* TileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D074A2EB2459FECF00425223 /* TileView.xib */; };
+		D074A31E245A1EA800425223 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A31D245A1EA800425223 /* TileViewController.swift */; };
+		D074A323245A20D800425223 /* IdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A322245A20D800425223 /* IdentifiableView.swift */; };
+		D074A325245A237F00425223 /* TileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D074A324245A237F00425223 /* TileView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0102F7B245A2C8900B9D202 /* Hello.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Hello.xib; sourceTree = "<group>"; };
 		D074A2C42459F96900425223 /* XTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D074A2C72459F96900425223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D074A2CB2459F96900425223 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +41,9 @@
 		D074A2DE2459F96B00425223 /* XTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTeamTests.swift; sourceTree = "<group>"; };
 		D074A2E02459F96B00425223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D074A2E92459FEC500425223 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
-		D074A2EB2459FECF00425223 /* TileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TileView.xib; sourceTree = "<group>"; };
+		D074A31D245A1EA800425223 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
+		D074A322245A20D800425223 /* IdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableView.swift; sourceTree = "<group>"; };
+		D074A324245A237F00425223 /* TileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TileView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				D074A2C72459F96900425223 /* AppDelegate.swift */,
-				D074A2CB2459F96900425223 /* MainViewController.swift */,
-				D074A2E92459FEC500425223 /* TileView.swift */,
-				D074A2EB2459FECF00425223 /* TileView.xib */,
+				D074A31F245A20A300425223 /* Controllers */,
+				D074A320245A20B000425223 /* Views */,
 				D074A2D02459F96B00425223 /* Assets.xcassets */,
+				D074A321245A20C400425223 /* Extensions */,
 				D074A2D22459F96B00425223 /* LaunchScreen.storyboard */,
 				D074A2D52459F96B00425223 /* Info.plist */,
 			);
@@ -97,6 +103,33 @@
 				D074A2E02459F96B00425223 /* Info.plist */,
 			);
 			path = XTeamTests;
+			sourceTree = "<group>";
+		};
+		D074A31F245A20A300425223 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D074A2CB2459F96900425223 /* MainViewController.swift */,
+				D074A31D245A1EA800425223 /* TileViewController.swift */,
+				D0102F7B245A2C8900B9D202 /* Hello.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D074A320245A20B000425223 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D074A324245A237F00425223 /* TileView.xib */,
+				D074A2E92459FEC500425223 /* TileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D074A321245A20C400425223 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D074A322245A20D800425223 /* IdentifiableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +213,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D074A2EC2459FECF00425223 /* TileView.xib in Resources */,
+				D0102F7C245A2C8900B9D202 /* Hello.xib in Resources */,
+				D074A325245A237F00425223 /* TileView.xib in Resources */,
 				D074A2D42459F96B00425223 /* LaunchScreen.storyboard in Resources */,
 				D074A2D12459F96B00425223 /* Assets.xcassets in Resources */,
 			);
@@ -200,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D074A31E245A1EA800425223 /* TileViewController.swift in Sources */,
+				D074A323245A20D800425223 /* IdentifiableView.swift in Sources */,
 				D074A2CC2459F96900425223 /* MainViewController.swift in Sources */,
 				D074A2EA2459FEC500425223 /* TileView.swift in Sources */,
 				D074A2C82459F96900425223 /* AppDelegate.swift in Sources */,

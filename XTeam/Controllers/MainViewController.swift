@@ -18,13 +18,14 @@ final class MainViewController: UIViewController {
     
     let redVC = UIViewController()
     let blueVC = UIViewController()
-    var resumePages: [UIViewController]
+    var resumePages: [UIViewController] = []
     var currentIndex = 0
     
     init() {
-        self.resumePages = [self.redVC, self.blueVC]
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
+
+        self.resumePages = [TileViewController()]
         self.setGradient()
         self.setLabels()
         self.setPageController()
@@ -54,8 +55,8 @@ final class MainViewController: UIViewController {
         self.view.addSubview(self.detailLabel)
         self.detailLabel.translatesAutoresizingMaskIntoConstraints = false
         self.detailLabel.text = "My name is Justin Lennox and I've created this app as a kind of résumé for you."
-        self.detailLabel.textColor = .white
-        self.detailLabel.font = UIFont.systemFont(ofSize: 30.0, weight: .regular)
+        self.detailLabel.textColor = UIColor.white.withAlphaComponent(0.5)
+        self.detailLabel.font = UIFont.systemFont(ofSize: 25.0, weight: .regular)
         self.detailLabel.numberOfLines = 0
     }
     
@@ -89,7 +90,7 @@ final class MainViewController: UIViewController {
             self.detailLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
             
             self.pageController.view.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
-            self.pageController.view.topAnchor.constraint(equalTo: self.detailLabel.bottomAnchor, constant: 20.0),
+            self.pageController.view.topAnchor.constraint(equalTo: self.detailLabel.bottomAnchor, constant: 40.0),
             self.pageController.view.widthAnchor.constraint(equalToConstant: 325.0),
             self.pageController.view.heightAnchor.constraint(equalToConstant: 405.0)
             
