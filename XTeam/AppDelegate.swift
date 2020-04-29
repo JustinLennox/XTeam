@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let rootNavController = UINavigationController(rootViewController: TileViewController())
+        let rootNavController = UINavigationController(rootViewController: MainViewController())
         rootNavController.navigationBar.barStyle = .black
         rootNavController.navigationBar.isHidden = true
         self.window?.rootViewController = rootNavController

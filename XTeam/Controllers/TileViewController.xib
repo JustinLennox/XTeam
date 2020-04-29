@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TileViewController" customModule="XTeam" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="C6a-7l-8CC" id="C9a-m9-5cA"/>
+                <outlet property="detailLabel" destination="tTI-gX-Od0" id="OXI-wx-U7D"/>
+                <outlet property="imageView" destination="7yp-8n-Onn" id="rex-9m-D5b"/>
+                <outlet property="numberLabel" destination="RRY-U3-ybB" id="epQ-YY-lsv"/>
+                <outlet property="titleLabel" destination="L0d-Gr-MER" id="6Fn-Hy-NYj"/>
+                <outlet property="view" destination="9So-db-3hW" id="4Ii-or-FjV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9So-db-3hW">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6a-7l-8CC" userLabel="ContainerView">
+                    <rect key="frame" x="20" y="110" width="335" height="552"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRY-U3-ybB">
+                            <rect key="frame" x="196.5" y="160" width="103.5" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="pNV-YJ-G3C"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="200"/>
+                            <color key="textColor" red="0.93728238340000003" green="0.93312102559999999" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foxtail Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="L0d-Gr-MER">
+                            <rect key="frame" x="35" y="210" width="265" height="48"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                            <color key="textColor" red="0.2750727832" green="0.29176038500000001" blue="0.40001404289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founder, CEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-gX-Od0">
+                            <rect key="frame" x="35" y="268" width="265" height="32.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <color key="textColor" red="0.2750727832" green="0.29176038500000001" blue="0.40001404289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-QM-ZIM" userLabel="Learn More">
+                            <rect key="frame" x="35" y="330.5" width="121" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="1Ah-Qm-Gk7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Learn More →">
+                                <color key="titleColor" red="0.80928189770000003" green="0.50903592529999997" blue="0.48511345830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="learnMoreButtonPressed:" destination="-1" eventType="touchUpInside" id="KGs-nQ-KRG"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shadow" translatesAutoresizingMaskIntoConstraints="NO" id="in6-oS-phv" userLabel="ShadowView">
+                            <rect key="frame" x="42.5" y="82" width="250" height="100"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="xAk-QM-ZIM" firstAttribute="leading" secondItem="C6a-7l-8CC" secondAttribute="leading" constant="35" id="976-4A-yon"/>
+                        <constraint firstItem="tTI-gX-Od0" firstAttribute="top" secondItem="L0d-Gr-MER" secondAttribute="bottom" constant="10" id="Bz3-3u-WBT"/>
+                        <constraint firstItem="xAk-QM-ZIM" firstAttribute="top" secondItem="tTI-gX-Od0" secondAttribute="bottom" constant="30" id="Jcc-Zu-btD"/>
+                        <constraint firstAttribute="trailing" secondItem="tTI-gX-Od0" secondAttribute="trailing" constant="35" id="K5g-D6-G3b"/>
+                        <constraint firstItem="L0d-Gr-MER" firstAttribute="leading" secondItem="C6a-7l-8CC" secondAttribute="leading" constant="35" id="ZN3-tG-Di1"/>
+                        <constraint firstItem="tTI-gX-Od0" firstAttribute="leading" secondItem="C6a-7l-8CC" secondAttribute="leading" constant="35" id="i4f-Sf-UJf"/>
+                        <constraint firstAttribute="trailing" secondItem="L0d-Gr-MER" secondAttribute="trailing" constant="35" id="uCO-tq-VNG"/>
+                        <constraint firstAttribute="trailing" secondItem="RRY-U3-ybB" secondAttribute="trailing" constant="35" id="uaF-he-2AF"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FoxtailBrick" translatesAutoresizingMaskIntoConstraints="NO" id="7yp-8n-Onn">
+                    <rect key="frame" x="62.5" y="10" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7yp-8n-Onn" secondAttribute="height" multiplier="1:1" id="oMF-RZ-gdI"/>
+                        <constraint firstAttribute="height" constant="250" id="w8R-Ix-ofd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="C6a-7l-8CC" firstAttribute="top" secondItem="7yp-8n-Onn" secondAttribute="bottom" constant="-150" id="3tL-mz-gxs"/>
+                <constraint firstItem="gcV-6X-h1k" firstAttribute="trailing" secondItem="C6a-7l-8CC" secondAttribute="trailing" constant="20" id="63S-yh-56d"/>
+                <constraint firstItem="L0d-Gr-MER" firstAttribute="top" secondItem="7yp-8n-Onn" secondAttribute="bottom" constant="60" id="6bz-nm-Auz"/>
+                <constraint firstItem="gcV-6X-h1k" firstAttribute="bottom" secondItem="C6a-7l-8CC" secondAttribute="bottom" constant="5" id="BHg-zG-alI"/>
+                <constraint firstItem="in6-oS-phv" firstAttribute="trailing" secondItem="7yp-8n-Onn" secondAttribute="trailing" id="D1v-o0-4Tb"/>
+                <constraint firstItem="C6a-7l-8CC" firstAttribute="leading" secondItem="gcV-6X-h1k" secondAttribute="leading" constant="20" id="Gdk-v4-Cnd"/>
+                <constraint firstItem="7yp-8n-Onn" firstAttribute="top" secondItem="gcV-6X-h1k" secondAttribute="top" constant="10" id="U44-He-ARy"/>
+                <constraint firstItem="in6-oS-phv" firstAttribute="top" secondItem="7yp-8n-Onn" secondAttribute="bottom" constant="-68" id="U6i-oz-3kW"/>
+                <constraint firstItem="in6-oS-phv" firstAttribute="centerX" secondItem="7yp-8n-Onn" secondAttribute="centerX" id="aR9-rd-aHD"/>
+                <constraint firstItem="7yp-8n-Onn" firstAttribute="centerX" secondItem="9So-db-3hW" secondAttribute="centerX" id="aq4-lV-1hX"/>
+                <constraint firstItem="in6-oS-phv" firstAttribute="leading" secondItem="7yp-8n-Onn" secondAttribute="leading" id="cTR-vy-b0x"/>
+                <constraint firstItem="RRY-U3-ybB" firstAttribute="top" secondItem="7yp-8n-Onn" secondAttribute="bottom" constant="10" id="kg9-lx-5aW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gcV-6X-h1k"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="916.1919040479761"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FoxtailBrick" width="320" height="296"/>
+        <image name="Shadow" width="319" height="100"/>
+    </resources>
+</document>

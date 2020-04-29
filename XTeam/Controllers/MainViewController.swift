@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
 
-        self.resumePages = [TileViewController()]
+        self.resumePages = [TileViewController(tileDelegate: self), TileViewController(tileDelegate: self)]
         self.setGradient()
         self.setLabels()
         self.setPageController()
@@ -91,8 +91,8 @@ final class MainViewController: UIViewController {
             
             self.pageController.view.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
             self.pageController.view.topAnchor.constraint(equalTo: self.detailLabel.bottomAnchor, constant: 40.0),
-            self.pageController.view.widthAnchor.constraint(equalToConstant: 325.0),
-            self.pageController.view.heightAnchor.constraint(equalToConstant: 405.0)
+            self.pageController.view.widthAnchor.constraint(equalToConstant: 390.0),
+            self.pageController.view.heightAnchor.constraint(equalToConstant: 550.0)
             
         ])
     }
@@ -150,6 +150,11 @@ extension MainViewController: UIPageViewControllerDataSource {
         
         return self.resumePages[nextIndex]
     }
-    
+}
+
+extension MainViewController: TileSelectorDelegate {
+    func tileSelected() {
+        self.navigationController?.present(UIViewController(), animated: true)
+    }
 }
 

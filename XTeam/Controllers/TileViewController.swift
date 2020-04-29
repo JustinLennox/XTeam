@@ -8,14 +8,35 @@
 
 import UIKit
 
-class TileViewController: UIViewController {
+class TileViewController: UIViewController, IdentifiableView {
         
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    weak var tileDelegate: TileSelectorDelegate?
+    
+    init(tileDelegate: TileSelectorDelegate) {
+        super.init(nibName: "TileViewController", bundle: nil)
+        self.tileDelegate = tileDelegate
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.containerView.layer.cornerRadius = 25.0
+    }
+    
+    @IBAction func learnMoreButtonPressed(_ sender: Any) {
+        self.tileDelegate?.tileSelected()
+    }
+    
+}
+
+protocol TileSelectorDelegate: class {
+    func tileSelected()
 }
