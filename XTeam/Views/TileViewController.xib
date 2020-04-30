@@ -12,6 +12,7 @@
                 <outlet property="containerView" destination="C6a-7l-8CC" id="C9a-m9-5cA"/>
                 <outlet property="detailLabel" destination="tTI-gX-Od0" id="OXI-wx-U7D"/>
                 <outlet property="imageView" destination="7yp-8n-Onn" id="rex-9m-D5b"/>
+                <outlet property="learnMoreButton" destination="xAk-QM-ZIM" id="8Vl-ir-g2m"/>
                 <outlet property="numberLabel" destination="RRY-U3-ybB" id="epQ-YY-lsv"/>
                 <outlet property="titleLabel" destination="L0d-Gr-MER" id="6Fn-Hy-NYj"/>
                 <outlet property="view" destination="9So-db-3hW" id="4Ii-or-FjV"/>

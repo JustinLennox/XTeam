@@ -16,6 +16,7 @@ class TileViewController: UIViewController, IdentifiableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var learnMoreButton: UIButton!
     
     var resumeItem: ResumeItem?
     var index: Int?
@@ -43,6 +44,10 @@ class TileViewController: UIViewController, IdentifiableView {
         self.detailLabel.text = resumeItem.detail
         self.numberLabel.text = String(index + 1)
         self.imageView.image = UIImage(named: resumeItem.imageName)
+        
+        if index == 3 {
+            self.learnMoreButton.setTitle("Hire →", for: .normal)
+        }
     }
     
     @IBAction func learnMoreButtonPressed(_ sender: Any) {

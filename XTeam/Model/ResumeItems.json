@@ -70,5 +70,10 @@
             "assetName":"Events"
           },
       ]
+  },
+  {"title": "X-Team?",
+    "detail": "iOS Developer",
+    "imageName": "XTeam",
+    "longDescription":"Hey did you actually run this app? Or even look this far into the code? I'm impressed! I didn't expect you to. Well that's pretty cool. Text me and let's chat. 678-447-4380",
   }
 ]
