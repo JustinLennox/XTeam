@@ -8,20 +8,19 @@
 
 import UIKit
 
-final class ResumeOverviewViewController: UIViewController {
+class ResumeOverviewViewController: UIViewController {
     
     let gradient = CAGradientLayer()
     let titleLabel = UILabel()
     let detailLabel = UILabel()
-    let pageController = UIPageViewController(transitionStyle: .scroll
-        , navigationOrientation: .horizontal, options: nil)
     
-    let redVC = UIViewController()
-    let blueVC = UIViewController()
+    // MARK: Page Controller Properties
+    let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     var currentIndex = 0
     var resumePages: [UIViewController] = []
     let resumeItems: [ResumeItem]
     
+    // MARK: View Lifecycle
     init() {
         self.resumeItems = ResumeItem.loadFromJSON()
         super.init(nibName: nil, bundle: nil)
@@ -29,12 +28,13 @@ final class ResumeOverviewViewController: UIViewController {
             self.resumePages.append(TileViewController(tileDelegate: self, resumeItem: self.resumeItems[i], index: i))
         }
         self.view.backgroundColor = .white
+        self.titleLabel.alpha = 0.0
+        self.detailLabel.alpha = 0.0
+        self.pageController.view.alpha = 0.0
         self.setGradient()
         self.setLabels()
         self.setPageController()
         self.layoutViews()
-        self.redVC.view.backgroundColor = .red
-        self.blueVC.view.backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {
@@ -43,10 +43,29 @@ final class ResumeOverviewViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        // We need to update the gradient's frame on viewWillLayout because you can't
-        // add autolayout constraints to CALayers
+        /* We need to update the gradient's frame on viewWillLayout because you can't
+         add autolayout constraints to CALayers */
         self.gradient.frame = self.view.bounds
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        /*  I'll do a super basic animation here. Nothing fancy but better than a lame static app.
+            We're going to loop through our three main views and show them all one after another.
+            Instead of nesting 3 or 4 layers of UIView.animate or DispatchQueues we can just loop
+            through an array of views and associated delays at which to show them */
+        
+        let animatingViewsAndDelays = [self.titleLabel: 0.5, self.detailLabel: 2.0, self.pageController.view: 6.0]
+        for (view, delay) in animatingViewsAndDelays {
+            UIView.animate(withDuration: 0.5, delay: delay, options: [.transitionFlipFromBottom], animations: {
+                view?.alpha = 1.0
+            })
+        }
+
+    }
+    
+    // MARK: View Configuration
     
     private func setLabels() {
         self.view.addSubview(self.titleLabel)
@@ -57,7 +76,8 @@ final class ResumeOverviewViewController: UIViewController {
         
         self.view.addSubview(self.detailLabel)
         self.detailLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.detailLabel.text = "My name is Justin Lennox and I've created this app as a kind of résumé for you."
+        // How do y'all spell resume? Wikipedia says résumé but that seems kind of pretentious.
+        self.detailLabel.text = "My name is Justin Lennox and I've created this app as a kind of resume for you."
         self.detailLabel.textColor = UIColor.white.withAlphaComponent(0.5)
         self.detailLabel.font = UIFont.systemFont(ofSize: 25.0, weight: .regular)
         self.detailLabel.numberOfLines = 0
@@ -70,19 +90,16 @@ final class ResumeOverviewViewController: UIViewController {
         self.view.layer.addSublayer(self.gradient)
     }
     
-    
     private func setPageController() {
         self.pageController.view.translatesAutoresizingMaskIntoConstraints = false
         self.pageController.dataSource = self
         self.pageController.setViewControllers([self.resumePages[0]], direction: .forward, animated: true)
-        self.pageController.delegate = self
         self.addChild(self.pageController)
         self.view.addSubview(self.pageController.view)
         self.pageController.didMove(toParent: self)
     }
     
     private func layoutViews() {
-        
         NSLayoutConstraint.activate([
             self.titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
@@ -100,10 +117,6 @@ final class ResumeOverviewViewController: UIViewController {
         ])
     }
 
-}
-
-extension ResumeOverviewViewController: UIPageViewControllerDelegate {
-    
 }
 
 extension ResumeOverviewViewController: UIPageViewControllerDataSource {
@@ -156,9 +169,11 @@ extension ResumeOverviewViewController: UIPageViewControllerDataSource {
 }
 
 extension ResumeOverviewViewController: TileSelectorDelegate {
+    
     func tileSelected(forItem resumeItem: ResumeItem, atIndex index: Int) {
         let resumeDetailsController = ResumeDetailsViewController(resumeItem: resumeItem, index: index)
         self.navigationController?.present(resumeDetailsController, animated: true)
     }
+    
 }
 
