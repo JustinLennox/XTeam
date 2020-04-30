@@ -9,6 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeDetailsViewController" customModule="XTeam" customModuleProvider="target">
             <connections>
+                <outlet property="detailLabel" destination="1jZ-cg-X1u" id="A5D-po-2YF"/>
+                <outlet property="galleryContainer" destination="XkA-rq-Hfi" id="ion-b5-9rq"/>
+                <outlet property="imageView" destination="S13-TY-he8" id="xnf-3k-Rh5"/>
+                <outlet property="longDescriptionLabel" destination="wsz-Vp-MAX" id="NQx-G6-IoN"/>
+                <outlet property="numberLabel" destination="8uo-hS-g3M" id="vVl-zz-4o7"/>
+                <outlet property="scrollView" destination="CGO-Uc-78h" id="Db0-ra-34k"/>
+                <outlet property="titleLabel" destination="SyT-LP-7vm" id="aN5-Gq-0sq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +28,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-SE-elF" userLabel="ContentView">
-                            <rect key="frame" x="10" y="0.0" width="394" height="1122"/>
+                            <rect key="frame" x="10" y="0.0" width="394" height="1127"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FoxtailBrick" translatesAutoresizingMaskIntoConstraints="NO" id="S13-TY-he8">
                                     <rect key="frame" x="119" y="5" width="300" height="300"/>
@@ -66,21 +73,28 @@
                                         <constraint firstAttribute="height" constant="2" id="Ofk-29-SXh"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="During my time at foxtail, I learned a lot of things." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-Vp-MAX">
-                                    <rect key="frame" x="20" y="517" width="354" height="43"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                    <color key="textColor" red="0.2750727832" green="0.29176038500000001" blue="0.40001404289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-Vp-MAX">
+                                    <rect key="frame" x="20" y="517" width="354" height="48"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="During my time at foxtail, I learned a lot of things.">
+                                            <attributes>
+                                                <color key="NSColor" red="0.2750727832" green="0.29176038500000001" blue="0.40001404289999998" alpha="0.64538402288732399" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txe-2Q-2TC">
-                                    <rect key="frame" x="20" y="580" width="354" height="2"/>
+                                    <rect key="frame" x="20" y="585" width="354" height="2"/>
                                     <color key="backgroundColor" red="0.90203076599999998" green="0.90559345479999998" blue="0.92157107589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="gWd-pc-74A"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-rq-Hfi">
-                                    <rect key="frame" x="20" y="602" width="354" height="500"/>
+                                    <rect key="frame" x="20" y="607" width="354" height="500"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="500" id="2Tx-Pc-Ot2"/>

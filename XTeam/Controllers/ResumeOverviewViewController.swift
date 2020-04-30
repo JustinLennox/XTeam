@@ -155,8 +155,8 @@ extension ResumeOverviewViewController: UIPageViewControllerDataSource {
 }
 
 extension ResumeOverviewViewController: TileSelectorDelegate {
-    func tileSelected(forItem resumeItem: ResumeItem) {
-        let resumeDetailsController = ResumeDetailsViewController(resumeItem: resumeItem)
+    func tileSelected(forItem resumeItem: ResumeItem, atIndex index: Int) {
+        let resumeDetailsController = ResumeDetailsViewController(resumeItem: resumeItem, index: index)
         self.navigationController?.present(resumeDetailsController, animated: true)
     }
 }

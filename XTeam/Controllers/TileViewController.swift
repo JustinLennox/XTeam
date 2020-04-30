@@ -45,15 +45,15 @@ class TileViewController: UIViewController, IdentifiableView {
     }
     
     @IBAction func learnMoreButtonPressed(_ sender: Any) {
-        guard let resumeItem = self.resumeItem else {
+        guard let resumeItem = self.resumeItem, let index = self.index else {
             assertionFailure("We selected a resume tile for which there was no associated resume item.")
             return
         }
-        self.tileDelegate?.tileSelected(forItem: resumeItem)
+        self.tileDelegate?.tileSelected(forItem: resumeItem, atIndex: index)
     }
     
 }
 
 protocol TileSelectorDelegate: class {
-    func tileSelected(forItem resumeItem: ResumeItem)
+    func tileSelected(forItem resumeItem: ResumeItem, atIndex index: Int)
 }
