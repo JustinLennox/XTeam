@@ -58,7 +58,7 @@ class ResumeOverviewViewController: UIViewController {
         
         let animatingViewsAndDelays = [self.titleLabel: 0.5, self.detailLabel: 2.0, self.pageController.view: 6.0]
         for (view, delay) in animatingViewsAndDelays {
-            UIView.animate(withDuration: 0.5, delay: delay, options: [.transitionFlipFromBottom], animations: {
+            UIView.animate(withDuration: 0.5, delay: delay, options: [], animations: {
                 view?.alpha = 1.0
             })
         }

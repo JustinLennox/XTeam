@@ -54,6 +54,7 @@ class TileViewController: UIViewController, IdentifiableView {
     
 }
 
+/// A delegate used for the tiled PageViewController to indicate when the 'Learn More' button is pressed.
 protocol TileSelectorDelegate: class {
     func tileSelected(forItem resumeItem: ResumeItem, atIndex index: Int)
 }
