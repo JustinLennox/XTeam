@@ -10,6 +10,7 @@ import Foundation
 
 struct ResumeItem: Codable {
     
+    // MARK: Overview Info
     let title: String
     let detail: String
     
@@ -18,9 +19,8 @@ struct ResumeItem: Codable {
     let imageName: String
     
     // MARK: Detailed Info
-    
     let longDescription: String
-    let galleryImageNames: [String]? = nil
+    let galleryAssets: [MediaItem]?
     
     /// Usually we'd probably load this kind of information from a database, along with localizations. I've created a JSON file and will load and decode it just to simulate this.
     static func loadFromJSON() -> [ResumeItem] {

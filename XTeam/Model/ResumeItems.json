@@ -2,16 +2,73 @@
   {"title":"Foxtail Games",
   "detail": "Founder, CEO",
   "imageName": "FoxtailBrick",
-  "longDescription": "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, deployed them on the App Store, and got thousands of downloads. We also won a number of entrepreneurial pitch competitions."
+  "longDescription": "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, deployed them on the App Store, and got thousands of downloads. We also won a number of entrepreneurial pitch competitions.",
+  "galleryAssets":
+    [
+        {
+          "mediaType":"image",
+          "assetName":"Cofounders"
+        },
+        {
+          "mediaType":"video",
+          "assetName":"BraveExplorers"
+        },
+        {
+          "mediaType":"image",
+          "assetName":"Chill"
+        },
+        {
+            "mediaType":"image",
+            "assetName":"SXSW"
+        },
+        {
+            "mediaType":"image",
+            "assetName":"TAG"
+        },
+        {
+            "mediaType":"image",
+            "assetName":"EarlyDemo"
+        }
+    ]
   },
   {"title":"Bloveit",
     "detail": "Lead Developer",
     "imageName": "Heart",
-    "longDescription": "Between Junior and Senior year of college I joined Bloveit as their lead developer. It was my first experience as a contract worker, and I successfully developed a fully functional iOS App for them."
+    "longDescription": "Between Junior and Senior year of college I joined Bloveit as their lead developer. It was my first experience as a contract worker, and I successfully developed a fully functional iOS App for them.",
+    "galleryAssets":
+      [
+          {
+            "mediaType":"image",
+            "assetName":"BloveitScreen1"
+          },
+          {
+            "mediaType":"image",
+            "assetName":"BloveitScreen2"
+          },
+          {
+            "mediaType":"image",
+            "assetName":"BloveitScreen3"
+          },
+      ]
   },
   {"title": "Apple",
     "detail": "iOS Developer",
     "imageName": "Phone",
-    "longDescription":"I got a job at Apple through an incredibly difficult series of events, from sponsored Hackathons to international competitions. Eventually I started work as an iOS developer in 2017, and have prototyped, built, tested, and maintained a myriad of apps for Apple."
+    "longDescription":"I got a job at Apple through an incredibly difficult series of events, from sponsored Hackathons to international competitions. Eventually I started work as an iOS developer in 2017, and have prototyped, built, tested, and maintained a myriad of apps for Apple.",
+    "galleryAssets":
+      [
+          {
+            "mediaType":"image",
+            "assetName":"Home"
+          },
+          {
+            "mediaType":"image",
+            "assetName":"Help"
+          },
+          {
+            "mediaType":"image",
+            "assetName":"Events"
+          },
+      ]
   }
 ]

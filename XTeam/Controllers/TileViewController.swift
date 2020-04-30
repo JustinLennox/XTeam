@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Displays info about my resume in a nice, minimalistic tile
 class TileViewController: UIViewController, IdentifiableView {
         
     @IBOutlet weak var containerView: UIView!

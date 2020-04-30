@@ -8,16 +8,23 @@
 
 import UIKit
 
+/// Used to show the broad overviews of a few points on my resume
 class ResumeOverviewViewController: UIViewController {
     
+    /// The background gradient layer for the view.
     let gradient = CAGradientLayer()
+    
     let titleLabel = UILabel()
     let detailLabel = UILabel()
     
     // MARK: Page Controller Properties
     let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     var currentIndex = 0
+    
+    /// The array of view controllers to provide to the PageViewController
     var resumePages: [UIViewController] = []
+    
+    /// The array of actual data objects to be represented with each PageViewController page
     let resumeItems: [ResumeItem]
     
     // MARK: View Lifecycle
@@ -28,6 +35,7 @@ class ResumeOverviewViewController: UIViewController {
             self.resumePages.append(TileViewController(tileDelegate: self, resumeItem: self.resumeItems[i], index: i))
         }
         self.view.backgroundColor = .white
+        // I set the alphas to 0 here because I'm going to animate them in on ViewDidAppear
         self.titleLabel.alpha = 0.0
         self.detailLabel.alpha = 0.0
         self.pageController.view.alpha = 0.0
