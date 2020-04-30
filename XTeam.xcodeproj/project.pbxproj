@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		D0102F7C245A2C8900B9D202 /* TileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0102F7B245A2C8900B9D202 /* TileViewController.xib */; };
 		D074A2C82459F96900425223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2C72459F96900425223 /* AppDelegate.swift */; };
-		D074A2CC2459F96900425223 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2CB2459F96900425223 /* MainViewController.swift */; };
+		D074A2CC2459F96900425223 /* ResumeOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2CB2459F96900425223 /* ResumeOverviewViewController.swift */; };
 		D074A2D12459F96B00425223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D074A2D02459F96B00425223 /* Assets.xcassets */; };
 		D074A2D42459F96B00425223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D074A2D22459F96B00425223 /* LaunchScreen.storyboard */; };
 		D074A2DF2459F96B00425223 /* XTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A2DE2459F96B00425223 /* XTeamTests.swift */; };
 		D074A31E245A1EA800425223 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A31D245A1EA800425223 /* TileViewController.swift */; };
 		D074A323245A20D800425223 /* IdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074A322245A20D800425223 /* IdentifiableView.swift */; };
 		D093D628245A3DBB00C2FDAC /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093D627245A3DBB00C2FDAC /* ResumeItem.swift */; };
+		D093D62D245A46A700C2FDAC /* ResumeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093D62B245A46A700C2FDAC /* ResumeDetailsViewController.swift */; };
+		D093D62E245A46A700C2FDAC /* ResumeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D093D62C245A46A700C2FDAC /* ResumeDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,7 @@
 		D0102F7B245A2C8900B9D202 /* TileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TileViewController.xib; sourceTree = "<group>"; };
 		D074A2C42459F96900425223 /* XTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D074A2C72459F96900425223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D074A2CB2459F96900425223 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D074A2CB2459F96900425223 /* ResumeOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeOverviewViewController.swift; sourceTree = "<group>"; };
 		D074A2D02459F96B00425223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D074A2D32459F96B00425223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D074A2D52459F96B00425223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		D074A31D245A1EA800425223 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		D074A322245A20D800425223 /* IdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableView.swift; sourceTree = "<group>"; };
 		D093D627245A3DBB00C2FDAC /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
+		D093D62B245A46A700C2FDAC /* ResumeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDetailsViewController.swift; sourceTree = "<group>"; };
+		D093D62C245A46A700C2FDAC /* ResumeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,8 @@
 		D074A31F245A20A300425223 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D074A2CB2459F96900425223 /* MainViewController.swift */,
+				D074A2CB2459F96900425223 /* ResumeOverviewViewController.swift */,
+				D093D62B245A46A700C2FDAC /* ResumeDetailsViewController.swift */,
 				D074A31D245A1EA800425223 /* TileViewController.swift */,
 			);
 			path = Controllers;
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D0102F7B245A2C8900B9D202 /* TileViewController.xib */,
+				D093D62C245A46A700C2FDAC /* ResumeDetailsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			files = (
 				D0102F7C245A2C8900B9D202 /* TileViewController.xib in Resources */,
 				D074A2D42459F96B00425223 /* LaunchScreen.storyboard in Resources */,
+				D093D62E245A46A700C2FDAC /* ResumeDetailsViewController.xib in Resources */,
 				D074A2D12459F96B00425223 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,10 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D093D62D245A46A700C2FDAC /* ResumeDetailsViewController.swift in Sources */,
 				D093D628245A3DBB00C2FDAC /* ResumeItem.swift in Sources */,
 				D074A31E245A1EA800425223 /* TileViewController.swift in Sources */,
 				D074A323245A20D800425223 /* IdentifiableView.swift in Sources */,
-				D074A2CC2459F96900425223 /* MainViewController.swift in Sources */,
+				D074A2CC2459F96900425223 /* ResumeOverviewViewController.swift in Sources */,
 				D074A2C82459F96900425223 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

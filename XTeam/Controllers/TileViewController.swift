@@ -24,7 +24,7 @@ class TileViewController: UIViewController, IdentifiableView {
         self.resumeItem = resumeItem
         self.tileDelegate = tileDelegate
         self.index = index
-        super.init(nibName: "TileViewController", bundle: nil)
+        super.init(nibName: TileViewController.classIdentifier, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

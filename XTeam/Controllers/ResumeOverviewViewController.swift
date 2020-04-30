@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ResumeOverview: UIViewController {
+final class ResumeOverviewViewController: UIViewController {
     
     let gradient = CAGradientLayer()
     let titleLabel = UILabel()
@@ -101,11 +101,11 @@ final class ResumeOverview: UIViewController {
 
 }
 
-extension ResumeOverview: UIPageViewControllerDelegate {
+extension ResumeOverviewViewController: UIPageViewControllerDelegate {
     
 }
 
-extension ResumeOverview: UIPageViewControllerDataSource {
+extension ResumeOverviewViewController: UIPageViewControllerDataSource {
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return self.currentIndex
@@ -154,9 +154,10 @@ extension ResumeOverview: UIPageViewControllerDataSource {
     }
 }
 
-extension ResumeOverview: TileSelectorDelegate {
+extension ResumeOverviewViewController: TileSelectorDelegate {
     func tileSelected(forItem resumeItem: ResumeItem) {
-        self.navigationController?.present(UIViewController(), animated: true)
+        let resumeDetailsController = ResumeDetailsViewController(resumeItem: resumeItem)
+        self.navigationController?.present(resumeDetailsController, animated: true)
     }
 }
 

@@ -12,7 +12,7 @@ import UIKit
 public protocol IdentifiableView {
 }
 
-public extension IdentifiableView where Self: UIView {
+public extension IdentifiableView where Self: UIViewController {
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
