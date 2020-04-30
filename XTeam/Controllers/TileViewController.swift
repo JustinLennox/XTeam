@@ -48,6 +48,7 @@ class TileViewController: UIViewController, IdentifiableView {
         if index == 3 {
             self.learnMoreButton.setTitle("Hire →", for: .normal)
         }
+        
     }
     
     @IBAction func learnMoreButtonPressed(_ sender: Any) {
