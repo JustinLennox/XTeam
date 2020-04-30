@@ -20,14 +20,15 @@ final class ResumeOverviewViewController: UIViewController {
     let blueVC = UIViewController()
     var currentIndex = 0
     var resumePages: [UIViewController] = []
-    var resumeItems: [ResumeItem]  = [ResumeItem(title: "Foxtail Games", detail: "Founder, CEO", imageName: "FoxtailBrick", longDescription: "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, many of which shipped to the App Store. We gained a few thousand downloads, and won a number of entrepreneur pitch competitions.", galleryImageNames: []),
-    ResumeItem(title: "Bloveit", detail: "Lead Developer", imageName: "Heart", longDescription: "When I was a junior in college I started Foxtail Games. During my time as CEO I developed multiple apps, many of which shipped to the App Store. We gained a few thousand downloads, and won a number of entrepreneur pitch competitions.", galleryImageNames: [])]
+    let resumeItems: [ResumeItem]
     
     init() {
+        self.resumeItems = ResumeItem.loadFromJSON()
         super.init(nibName: nil, bundle: nil)
+        for i in 0..<self.resumeItems.count {
+            self.resumePages.append(TileViewController(tileDelegate: self, resumeItem: self.resumeItems[i], index: i))
+        }
         self.view.backgroundColor = .white
-
-        self.resumePages = [TileViewController(tileDelegate: self, resumeItem: self.resumeItems[0], index: 0), TileViewController(tileDelegate: self, resumeItem: self.resumeItems[1], index: 1)]
         self.setGradient()
         self.setLabels()
         self.setPageController()

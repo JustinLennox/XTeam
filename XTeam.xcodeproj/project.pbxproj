@@ -18,6 +18,7 @@
 		D093D628245A3DBB00C2FDAC /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093D627245A3DBB00C2FDAC /* ResumeItem.swift */; };
 		D093D62D245A46A700C2FDAC /* ResumeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093D62B245A46A700C2FDAC /* ResumeDetailsViewController.swift */; };
 		D093D62E245A46A700C2FDAC /* ResumeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D093D62C245A46A700C2FDAC /* ResumeDetailsViewController.xib */; };
+		D093D630245A580500C2FDAC /* ResumeItems.json in Resources */ = {isa = PBXBuildFile; fileRef = D093D62F245A580500C2FDAC /* ResumeItems.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D093D627245A3DBB00C2FDAC /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
 		D093D62B245A46A700C2FDAC /* ResumeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDetailsViewController.swift; sourceTree = "<group>"; };
 		D093D62C245A46A700C2FDAC /* ResumeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeDetailsViewController.xib; sourceTree = "<group>"; };
+		D093D62F245A580500C2FDAC /* ResumeItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ResumeItems.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				D093D627245A3DBB00C2FDAC /* ResumeItem.swift */,
+				D093D62F245A580500C2FDAC /* ResumeItems.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				D074A2D42459F96B00425223 /* LaunchScreen.storyboard in Resources */,
 				D093D62E245A46A700C2FDAC /* ResumeDetailsViewController.xib in Resources */,
 				D074A2D12459F96B00425223 /* Assets.xcassets in Resources */,
+				D093D630245A580500C2FDAC /* ResumeItems.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
