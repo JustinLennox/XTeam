@@ -120,7 +120,7 @@ class ResumeOverviewViewController: UIViewController {
             self.pageController.view.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
             self.pageController.view.topAnchor.constraint(equalTo: self.detailLabel.bottomAnchor, constant: 40.0),
             self.pageController.view.widthAnchor.constraint(equalToConstant: 390.0),
-            self.pageController.view.heightAnchor.constraint(equalToConstant: 550.0)
+            self.pageController.view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
             
         ])
     }
